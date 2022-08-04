@@ -8,9 +8,15 @@ from django.contrib.auth.models import User # 导入文章作者
 class Category(models.Model): 
     name = models.CharField(max_length=100) # 分类名为name
 
+    def __str__(self):
+        return self.name
+
 # 标签
 class Tag(models.Model):
     name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
 
 # 文章
 class Post(models.Model):
@@ -25,3 +31,6 @@ class Post(models.Model):
     tags = models.ManyToManyField(Tag, blank=True) # 多对多关系
 
     author = models.ForeignKey(User, on_delete=models.CASCADE) # 一对多
+
+    def __str__(self):
+        return self.title
