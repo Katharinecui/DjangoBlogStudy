@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User # 导入文章作者
 from django.utils import timezone # 导入时间模块
 from django.urls import reverse
+import markdown
+from django.utils.html import strip_tags
 
 # Create your models here.
 
@@ -48,6 +50,13 @@ class Post(models.Model):
 
     def save(self, *args, **kwargs): # 自动填充修改时间
         self.modified_time = timezone.now()
+
+        md = markdown.Markdown(extensions=[
+            'markdown.extensions.extra',
+            'markdown.extensions.codehilite',
+        ])
+        self.excerpt = strip_tags(md.convert(self.body))[:54]
+        
         super().save(*args, **kwargs)
 
     def __str__(self):
