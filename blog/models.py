@@ -47,6 +47,7 @@ class Post(models.Model):
     class Meta: # 后台汉化
         verbose_name = '文章'
         verbose_name_plural = verbose_name
+        ordering = ['-created_time']
 
     def save(self, *args, **kwargs): # 自动填充修改时间
         self.modified_time = timezone.now()
