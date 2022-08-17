@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "cd71ab6b94ffbcbc30cf1354920845e3f2bfde04169acdafbfe573b5262ae4c6"
+            "sha256": "cc3374a16a0bed8b4091de8ef394b4aad8b08be4a4166bb6b6da70f636aaed87"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -24,6 +24,14 @@
             "index": "pypi",
             "version": "==2.2.3"
         },
+        "gunicorn": {
+            "hashes": [
+                "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e",
+                "sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8"
+            ],
+            "index": "pypi",
+            "version": "==20.1.0"
+        },
         "importlib-metadata": {
             "hashes": [
                 "sha256:65a9576a5b2d58ca44d133c42a241905cc45e34d2c06fd5ba2bafa221e5d7b5e",
@@ -42,17 +50,16 @@
         },
         "pytz": {
             "hashes": [
-                "sha256:1e760e2fe6a8163bc0b3d9a19c4f84342afa0a2affebfaa84b01b978a02ecaa7",
-                "sha256:e68985985296d9a66a881eb3193b0906246245294a881e7c8afe623866ac6a5c"
+                "sha256:220f481bdafa09c3955dfbdddb7b57780e9a94f5127e35456a48589b9e0c0197",
+                "sha256:cea221417204f2d1a2aa03ddae3e867921971d0d76f14d87abb4414415bbdcf5"
             ],
-            "version": "==2022.1"
+            "version": "==2022.2.1"
         },
         "sqlparse": {
             "hashes": [
                 "sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae",
                 "sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d"
             ],
-            "markers": "python_version >= '3.5'",
             "version": "==0.4.2"
         },
         "typing-extensions": {
@@ -68,7 +75,6 @@
                 "sha256:71c644c5369f4a6e07636f0aa966270449561fcea2e3d6747b8d23efaa9d7832",
                 "sha256:9fe5ea21568a0a70e50f273397638d39b03353731e6cbbb3fd8502a33fec40bc"
             ],
-            "markers": "python_version >= '3.6'",
             "version": "==3.6.0"
         }
     },
